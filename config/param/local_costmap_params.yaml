@@ -1,0 +1,27 @@
+local_costmap:
+
+  # 对于局部代价地图，使用量程坐标作为全局坐标
+  global_frame: /odom
+
+  # 机器人参考坐标
+  robot_base_frame: /base_link
+
+  # 基于传感器数据更新局部地图的频率
+  update_frequency: 3.0
+
+  # 发布信息的频率
+  publish_frequency: 1.0
+
+  # 是否使用先验地图
+  static_map: true
+
+  # rolling_window用于配置在机器人运动过程中，代价地图始终以机器人为中心
+  rolling_window: false
+
+  # 代价地图的尺寸和分辨率 (m)
+  width: 10.0
+  height: 20.0
+  resolution: 0.01
+
+  # 在tf树坐标之间转换的允许延时或者绘图过程临时被中止的允许延时 (s)
+  transform_tolerance: 1.0
