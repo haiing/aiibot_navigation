@@ -1,8 +1,11 @@
 # 更新规划进程的频率 (次/s)
-controller_frequency: 4.0
-
+controller_frequency: 5.0
 recovery_behavior_enabled: true
-clearing_rotation_allowed: false
+# clearing_rotation_allowed: false
+
+NavfnROS:
+  allow_unknown: true # Specifies whether or not to allow navfn to create plans that traverse unknown space.
+  default_tolerance: 0.1 # A tolerance on the goal point for the planner.
 
 TrajectoryPlannerROS:
 
