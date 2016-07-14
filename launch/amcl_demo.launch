@@ -10,6 +10,8 @@
   <include file="$(find aiibot_navigation)/launch/amcl.launch" />
 
   <!--- Run Move Base -->
-  <include file="$(find aiibot_navigation)/launch/move_base.launch" />
-
+  <include file="$(find aiibot_navigation)/launch/move_base.launch">
+    <arg name="no_map" value="false"/>
+  </include>
+  
 </launch>
