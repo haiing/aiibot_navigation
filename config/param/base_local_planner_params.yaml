@@ -10,14 +10,14 @@ NavfnROS:
 TrajectoryPlannerROS:
 
   # 机器人最大/最小线速度 (m/s)
-  max_vel_x: 0.5
+  max_vel_x: 0.3
   min_vel_x: 0.0
   max_vel_y: 0.0  # 两轮差分驱动机器人
   min_vel_y: 0.0
 
   # 机器人最大/最小转动速度 (rad/s)
-  max_vel_theta: 0.8
-  min_vel_theta: -0.8
+  max_vel_theta: 0.5
+  min_vel_theta: -0.5
 
   # 机器人最小原地旋转速度
   min_in_place_vel_theta: 0.5
@@ -82,13 +82,13 @@ DWAPlannerROS:
   acc_lim_y: 0
   acc_lim_th: 3.2
 
-  max_vel_x: 0.5
+  max_vel_x: 0.3
   min_vel_x: 0
   max_vel_y: 0
   min_vel_y: 0
 
-  max_trans_vel: 0.8
-  min_trans_vel: -0.8
+  max_trans_vel: 0.5
+  min_trans_vel: -0.5
   max_rot_vel: 1.0
   min_rot_vel: 0.2
 
