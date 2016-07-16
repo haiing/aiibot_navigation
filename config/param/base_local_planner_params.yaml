@@ -11,7 +11,7 @@ TrajectoryPlannerROS:
 
   # 机器人最大/最小线速度 (m/s)
   max_vel_x: 0.3
-  min_vel_x: 0.0
+  min_vel_x: -0.3
   max_vel_y: 0.0  # 两轮差分驱动机器人
   min_vel_y: 0.0
 
@@ -28,18 +28,18 @@ TrajectoryPlannerROS:
   # 最大线加速度 (m/s^2)
   acc_lim_x: 1.5
   acc_lim_y: 0.0
+
   # 最大角加速度 (rad/s^2)
-  acc_lim_theta: 1.2
+  acc_lim_theta: 2.0
 
   # 是否为全方位的机器人
-  holonomic_robot: false
+  holonomic_robot: true
 
   # 接近目标方向（就弧度来说）允许的误差（rad），此值太小会造成机器人在目标附近震荡
   yaw_goal_tolerance: 0.2 # about 6 degrees
 
   # 接近目标允许的误差（m），此值设置太小，机器人会没完没了在目标位置周围做小调整，而且此值不能小于地图的分辨率
   xy_goal_tolerance: 0.2  # 5 cm
-
 
   latch_xy_goal_tolerance: false
 
@@ -78,12 +78,12 @@ TrajectoryPlannerROS:
 
 DWAPlannerROS:
   # Robot configuration parameters
-  acc_lim_x: 2.5
+  acc_lim_x: 1.5
   acc_lim_y: 0
-  acc_lim_th: 3.2
+  acc_lim_th: 2.0
 
   max_vel_x: 0.3
-  min_vel_x: 0
+  min_vel_x: -0.3
   max_vel_y: 0
   min_vel_y: 0
 
@@ -91,6 +91,9 @@ DWAPlannerROS:
   min_trans_vel: -0.5
   max_rot_vel: 1.0
   min_rot_vel: 0.2
+
+  # 是否为全方位的机器人
+  holonomic_robot: true
 
   # Goal Tolerance Parameters
   yaw_goal_tolerance: 0.1
