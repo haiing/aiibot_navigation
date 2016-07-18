@@ -16,8 +16,8 @@ TrajectoryPlannerROS:
   min_vel_y: 0.0
 
   # 机器人最大/最小转动速度 (rad/s)
-  max_vel_theta: 0.5
-  min_vel_theta: -0.5
+  max_vel_theta: 0.6
+  min_vel_theta: -0.6
 
   # 机器人最小原地旋转速度
   min_in_place_vel_theta: 0.5
@@ -26,14 +26,14 @@ TrajectoryPlannerROS:
   escape_vel: -0.3
 
   # 最大线加速度 (m/s^2)
-  acc_lim_x: 1.5
+  acc_lim_x: 1.0
   acc_lim_y: 0.0
 
   # 最大角加速度 (rad/s^2)
-  acc_lim_theta: 2.0
+  acc_lim_theta: 1.0
 
   # 是否为全方位的机器人
-  holonomic_robot: true
+  holonomic_robot: false
 
   # 接近目标方向（就弧度来说）允许的误差（rad），此值太小会造成机器人在目标附近震荡
   yaw_goal_tolerance: 0.2 # about 6 degrees
@@ -78,9 +78,9 @@ TrajectoryPlannerROS:
 
 DWAPlannerROS:
   # Robot configuration parameters
-  acc_lim_x: 1.5
+  acc_lim_x: 1.0
   acc_lim_y: 0
-  acc_lim_th: 2.0
+  acc_lim_th: 1.0
 
   max_vel_x: 0.3
   min_vel_x: -0.3

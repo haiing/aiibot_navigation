@@ -2,8 +2,9 @@
 # robot_radius: 0.5
 
 # 多边形机器人边界
-footprint: [[-0.40, -0.24], [-0.40, 0.24], [0.09, 0.24], [0.09, -0.24]]
-footprint_padding: 0.01
+footprint: [[-0.42, -0.233], [-0.42, 0.233], [0.09, 0.233], [0.09, -0.233]]
+# footprint: [[0.06, 0.233], [0.09, 0], [0.06, -0.233], [-0.05, -0.233], [-0.05, -0.213], [-30.00, -0.213], [-40, -10.00], [-42.00, 0], [-40, 10.00], [-30, 0.213], [-0.05, 0.213], [-0.05, 0.233]]
+footprint_padding: 0.00
 
 # 传感器的最大探测距离
 obstacle_range: 5.5
@@ -14,7 +15,7 @@ raytrace_range: 6.0
 # min_obstacle_height: 0.1
 
 # 分辨率
-resolution: 0.05
+resolution: 0.03
 
 # 机器人参考坐标
 robot_base_frame: base_link
@@ -23,7 +24,7 @@ robot_base_frame: base_link
 update_frequency: 4.0
 
 # 发布信息的频率
-publish_frequency: 3.0
+publish_frequency: 4.0
 
 # 在tf树坐标之间转换的允许延时或者绘图过程临时被中止的允许延时 (s)
 transform_tolerance: 0.5
@@ -39,4 +40,4 @@ static:
 
 # 机器人与障碍物之间必须保持的最小距离
 inflation:
-  inflation_radius: 0.15
+  inflation_radius: 0.05
