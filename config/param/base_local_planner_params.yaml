@@ -93,7 +93,7 @@ DWAPlannerROS:
   min_rot_vel: 0.2
 
   # 是否为全方位的机器人
-  holonomic_robot: true
+  holonomic_robot: false
 
   # Goal Tolerance Parameters
   yaw_goal_tolerance: 0.1
