@@ -10,27 +10,27 @@ NavfnROS:
 TrajectoryPlannerROS:
 
   # 机器人最大/最小线速度 (m/s)
-  max_vel_x: 0.3
-  min_vel_x: -0.3
+  max_vel_x: 1.0
+  min_vel_x: 0.0
   max_vel_y: 0.0  # 两轮差分驱动机器人
   min_vel_y: 0.0
 
   # 机器人最大/最小转动速度 (rad/s)
-  max_vel_theta: 0.6
-  min_vel_theta: -0.6
+  max_vel_theta: 1.0
+  min_vel_theta: -1.0
 
   # 机器人最小原地旋转速度
-  min_in_place_vel_theta: 0.5
+  min_in_place_vel_theta: 0.3
 
   # 机器人的逃离速度，即背向相反方向行走速度 (m/s)
   escape_vel: -0.3
 
   # 最大线加速度 (m/s^2)
-  acc_lim_x: 1.0
+  acc_lim_x: 2.5
   acc_lim_y: 0.0
 
   # 最大角加速度 (rad/s^2)
-  acc_lim_theta: 1.0
+  acc_lim_theta: 3.2
 
   # 是否为全方位的机器人
   holonomic_robot: false
@@ -44,10 +44,10 @@ TrajectoryPlannerROS:
   latch_xy_goal_tolerance: false
 
   # 紧贴全局路径比到达目标的相对重要性，如果此值比gdist_scale大，那么机器人会更紧靠全局路径行走
-  pdist_scale: 0.4
+  pdist_scale: 0.75
 
   # 到达目标比紧靠全局路径的相对重要性，如果此值比pdist_scale大，那么机器人会采取任意路径优先到达目标
-  gdist_scale: 0.8
+  gdist_scale: 1.0
 
   # meter_scoring表示gdist_scale和pdist_scale参数是否假设goal_distance和path_distance以米或者单元来表达
   meter_scoring: true
@@ -57,9 +57,9 @@ TrajectoryPlannerROS:
   heading_scoring_timestep: 0.8
 
   # occdist_scale表示控制器尝试避开障碍物的权重
-  occdist_scale: 0.05
+  occdist_scale: 0.1
 
-  oscillation_reset_dist: 0.05
+  oscillation_reset_dist: 0.25
   publish_cost_grid_pc: false
   prune_plan: true
 
@@ -78,17 +78,17 @@ TrajectoryPlannerROS:
 
 DWAPlannerROS:
   # Robot configuration parameters
-  acc_lim_x: 1.0
+  acc_lim_x: 2.5
   acc_lim_y: 0
-  acc_lim_th: 1.0
+  acc_lim_th: 3.2
 
-  max_vel_x: 0.3
-  min_vel_x: -0.3
+  max_vel_x: 0.5
+  min_vel_x: 0.0
   max_vel_y: 0
   min_vel_y: 0
 
   max_trans_vel: 0.5
-  min_trans_vel: -0.5
+  min_trans_vel: 0.1
   max_rot_vel: 1.0
   min_rot_vel: 0.2
 
