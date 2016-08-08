@@ -10,10 +10,10 @@
       base_frame: base_link
       map_frame: map
 
-      map_update_interval: 0.5 # Publish new map
+      map_update_interval: 0.01 # Publish new map
 
-      maxUrange: 1 # Should be just less than sensor range
-      maxRange: 1.5 # Should be just greater than sensor range
+      maxUrange: 5.5 # Should be just less than sensor range
+      maxRange: 6.0 # Should be just greater than sensor range
       particles: 100 # Increased from 80
 
       # Update frequencies
@@ -23,10 +23,10 @@
       resampleThreshold: 0.5
 
       # Initial Map Size
-      xmin: -100.0
-      ymin: -100.0
-      xmax: 100.0
-      ymax: 100.0
+      xmin: -50.0
+      ymin: -50.0
+      xmax: 50.0
+      ymax: 50.0
       delta: 0.05
 
       # All default
